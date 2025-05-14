@@ -21,6 +21,5 @@ target_include_directories(Bevare PUBLIC ./Include)
 target_link_libraries(Bevare PUBLIC nvrhi glfw glm spdlog EASTL assimp)
 
 if (BEVARE_TEST)
-  set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
   add_subdirectory(./Test/)
 endif()
