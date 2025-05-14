@@ -11,8 +11,6 @@ set(all_files
   ${source_files}
 )
 
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-
 enable_testing()
 
 add_executable(BevareTest ${all_files})
