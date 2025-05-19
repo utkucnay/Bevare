@@ -1,8 +1,7 @@
 #pragma once
 
-#include "EASTL/shared_ptr.h"
-#include "EASTL/string_view.h"
-#include "GLFW/glfw3.h"
+#include "Graphics/Context/GraphicsContext.h"
+#include "nvrhi/nvrhi.h"
 
 int main(int argc, char** argv);
 
@@ -27,6 +26,11 @@ class UApplication {
 
  private:
   GLFWwindow* m_Window;
+
+  eastl::shared_ptr<IGraphicsContext> m_GraphicsContext;
+  nvrhi::CommandListHandle m_CommandList;
+
+  nvrhi::GraphicsPipelineHandle m_Pipeline;
 
   friend int ::main(int argc, char** argv);
 };
